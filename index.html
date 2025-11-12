@@ -7,7 +7,6 @@
     <meta name="description" content="Paket internet rumah Solo, Surakarta, Karanganyar, Boyolali murah unlimited. XLSatu provider WiFi rumahan tercepat dengan harga terjangkau. Pasang sekarang!">
     <meta name="keywords" content="internet rumah solo, wifi rumah solo, paket internet solo raya, internet unlimited solo, provider internet solo, pasang wifi solo, internet murah solo, internet cepat solo, xl home solo, internet rumahan surakarta">
     
-    <!-- Open Graph / Social Media -->
     <meta property="og:title" content="XLSatu - Internet Rumah Solo Raya Tercepat">
     <meta property="og:description" content="Paket internet rumah unlimited murah di Solo Raya. Pasang sekarang dan nikmati WiFi super cepat!">
     
@@ -227,6 +226,12 @@
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
+            display: flex; /* MODIFIKASI: Menambahkan flexbox */
+            flex-direction: column; /* MODIFIKASI: Agar tombol tetap di bawah */
+        }
+
+        .package-card-content {
+             flex-grow: 1; /* MODIFIKASI: Mendorong tombol ke bawah */
         }
         
         .package-card:hover {
@@ -298,6 +303,20 @@
             margin-right: 10px;
             font-size: 18px;
         }
+
+        /* MODIFIKASI: CSS untuk detail tambahan (TV, Bonus, dll) */
+        .package-details {
+            font-size: 18px;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .package-sub-details {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 20px;
+        }
         
         .package-button {
             display: block;
@@ -309,11 +328,21 @@
             text-align: center;
             font-weight: bold;
             transition: all 0.3s;
+            margin-top: auto; /* MODIFIKASI: Menempelkan tombol di bawah */
         }
         
         .package-button:hover {
             transform: scale(1.05);
             box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        /* MODIFIKASI: CSS untuk disclaimer PPN */
+        .ppn-disclaimer {
+            text-align: center;
+            font-size: 16px;
+            margin-top: 40px;
+            color: #777;
+            font-style: italic;
         }
         
         /* Testimonials */
@@ -479,7 +508,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
@@ -491,19 +519,16 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <h1>Internet Rumah Solo Raya Tercepat & Termurah</h1>
-            <h2>WiFi Unlimited dengan Kecepatan Hingga 100 Mbps</h2>
-            <p>Nikmati streaming, gaming, dan bekerja tanpa batas dengan XLSatu - Provider internet rumahan terpercaya di Solo Raya</p>
+            <h2>WiFi Unlimited dengan Kecepatan Hingga 1 Gbps</h2> <p>Nikmati streaming, gaming, dan bekerja tanpa batas dengan XLSatu - Provider internet rumahan terpercaya di Solo Raya</p>
             <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20ingin%20berlangganan%20internet%20rumah%20di%20Solo%20Raya.%20Mohon%20info%20lengkapnya." class="cta-button">
                 <i class="fab fa-whatsapp"></i> Pasang Sekarang via WhatsApp
             </a>
         </div>
     </section>
 
-    <!-- Coverage Area -->
     <section class="coverage">
         <div class="container">
             <h3><i class="fas fa-map-marker-alt"></i> Area Layanan XLSatu</h3>
@@ -519,7 +544,6 @@
         </div>
     </section>
 
-    <!-- Features -->
     <section class="features">
         <div class="container">
             <h2>Kenapa Pilih XLSatu untuk Internet Rumah Anda?</h2>
@@ -529,118 +553,320 @@
                         <i class="fas fa-bolt"></i>
                     </div>
                     <h3>Kecepatan Super</h3>
-                    <p>Koneksi internet hingga 100 Mbps untuk streaming 4K, gaming online tanpa lag</p>
-                </div>
+                    <p>Koneksi internet fiber optic stabil hingga 1 Gbps</p> </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-infinity"></i>
                     </div>
                     <h3>Unlimited Kuota</h3>
-                    <p>Tanpa batas kuota, browsing dan download sepuasnya 24/7</p>
+                    <p>Tanpa batas kuota (FUP), browsing dan download sepuasnya 24/7</p>
                 </div>
+                
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3>Support 24/7</h3>
-                    <p>Tim customer service siap membantu kapan saja</p>
+                    <h3>Add-on Kuota HP (FMC)</h3>
+                    <p>Dapatkan tambahan kuota HP se-Keluarga (2-3 anggota) hingga 50 GB. Hubungi kami untuk info!</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-tag"></i>
                     </div>
                     <h3>Harga Terjangkau</h3>
-                    <p>Paket internet murah mulai dari Rp 200 ribuan per bulan</p>
-                </div>
+                    <p>Paket internet murah mulai dari Rp 185.000 / bulan</p> </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-tools"></i>
                     </div>
-                    <h3>Gratis Instalasi</h3>
-                    <p>Biaya pemasangan gratis untuk pelanggan baru</p>
-                </div>
+                    <h3>Promo Instalasi</h3>
+                    <p>Tersedia promo Biaya Instalasi Rp 0,- untuk paket tertentu</p> </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Jaringan Stabil</h3>
-                    <p>Koneksi stabil dengan uptime 99.9%</p>
+                    <p>Koneksi fiber optic stabil, minim gangguan cuaca</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Packages -->
-    <section class="packages">
+    <section class="packages" id="paket-internet-only">
         <div class="container">
-            <h2>Paket Internet Rumah Solo Raya</h2>
-            <p class="packages-subtitle">Pilih paket yang sesuai dengan kebutuhan internet Anda</p>
+            <h2>Paket New Internet Only</h2>
+            <p class="packages-subtitle">Pilih paket internet murni sesuai kebutuhan Anda. Sempurna untuk browsing, streaming, dan WFH.</p>
             <div class="packages-grid">
-                <!-- Basic Package -->
+
                 <div class="package-card">
-                    <div class="package-name">Paket Basic</div>
-                    <div class="package-speed">20 Mbps</div>
-                    <div class="package-price">Rp 225.000</div>
-                    <div class="package-period">per bulan</div>
-                    <ul class="package-features">
-                        <li><i class="fas fa-check-circle"></i> Kecepatan 20 Mbps</li>
-                        <li><i class="fas fa-check-circle"></i> Unlimited Kuota</li>
-                        <li><i class="fas fa-check-circle"></i> Gratis Instalasi</li>
-                        <li><i class="fas fa-check-circle"></i> Support 24/7</li>
-                        <li><i class="fas fa-check-circle"></i> Cocok untuk 2-3 device</li>
-                        <li><i class="fas fa-check-circle"></i> Browsing & streaming HD</li>
-                    </ul>
-                    <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20Basic%2020%20Mbps%20di%20Solo%20Raya" class="package-button">
+                    <div class="package-card-content">
+                        <div class="package-name">STARTER</div>
+                        <div class="package-speed">20 Mbps</div>
+                        <div class="package-price">Rp 185.000</div>
+                        <div class="package-period">per bulan</div>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> Biaya Instalasi: Rp 100.000</li>
+                            <li><i class="fas fa-check-circle"></i> Unlimited Kuota</li>
+                            <li><i class="fas fa-check-circle"></i> Ideal untuk 1-3 device</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20STARTER%2020%20Mbps" class="package-button">
                         <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
                     </a>
                 </div>
 
-                <!-- Premium Package (Popular) -->
+                <div class="package-card">
+                    <div class="package-card-content">
+                        <div class="package-name">VALUE</div>
+                        <div class="package-speed">30 Mbps</div>
+                        <div class="package-price">Rp 219.000</div>
+                        <div class="package-period">per bulan</div>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> Biaya Instalasi: Rp 0,-</li>
+                            <li><i class="fas fa-check-circle"></i> Unlimited Kuota</li>
+                            <li><i class="fas fa-check-circle"></i> Streaming HD lancar</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20VALUE%2030%20Mbps" class="package-button">
+                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                    </a>
+                </div>
+
                 <div class="package-card popular">
-                    <div class="popular-badge">TERPOPULER</div>
-                    <div class="package-name">Paket Premium</div>
-                    <div class="package-speed">50 Mbps</div>
-                    <div class="package-price">Rp 350.000</div>
-                    <div class="package-period">per bulan</div>
-                    <ul class="package-features">
-                        <li><i class="fas fa-check-circle"></i> Kecepatan 50 Mbps</li>
-                        <li><i class="fas fa-check-circle"></i> Unlimited Kuota</li>
-                        <li><i class="fas fa-check-circle"></i> Gratis Instalasi</li>
-                        <li><i class="fas fa-check-circle"></i> Priority Support 24/7</li>
-                        <li><i class="fas fa-check-circle"></i> Cocok untuk 4-6 device</li>
-                        <li><i class="fas fa-check-circle"></i> Streaming 4K & gaming online</li>
-                        <li><i class="fas fa-check-circle"></i> Work from home lancar</li>
-                    </ul>
-                    <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20Premium%2050%20Mbps%20di%20Solo%20Raya" class="package-button">
+                    <div class="popular-badge">TERLARIS</div>
+                    <div class="package-card-content">
+                        <div class="package-name">SMART</div>
+                        <div class="package-speed">50 Mbps</div>
+                        <div class="package-price">Rp 229.000</div>
+                        <div class="package-period">per bulan</div>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> Biaya Instalasi: Rp 0,-</li>
+                            <li><i class="fas fa-check-circle"></i> Unlimited Kuota</li>
+                            <li><i class="fas fa-check-circle"></i> Cocok untuk WFH & 3-5 device</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20SMART%2050%20Mbps" class="package-button">
                         <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
                     </a>
                 </div>
 
-                <!-- Ultra Package -->
                 <div class="package-card">
-                    <div class="package-name">Paket Ultra</div>
-                    <div class="package-speed">100 Mbps</div>
-                    <div class="package-price">Rp 500.000</div>
-                    <div class="package-period">per bulan</div>
-                    <ul class="package-features">
-                        <li><i class="fas fa-check-circle"></i> Kecepatan 100 Mbps</li>
-                        <li><i class="fas fa-check-circle"></i> Unlimited Kuota</li>
-                        <li><i class="fas fa-check-circle"></i> Gratis Instalasi</li>
-                        <li><i class="fas fa-check-circle"></i> VIP Support 24/7</li>
-                        <li><i class="fas fa-check-circle"></i> Cocok untuk 8+ device</li>
-                        <li><i class="fas fa-check-circle"></i> Streaming 4K multiple device</li>
-                        <li><i class="fas fa-check-circle"></i> Gaming pro & bisnis online</li>
-                        <li><i class="fas fa-check-circle"></i> Kecepatan maksimal</li>
-                    </ul>
-                    <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20Ultra%20100%20Mbps%20di%20Solo%20Raya" class="package-button">
+                    <div class="package-card-content">
+                        <div class="package-name">FAMILY</div>
+                        <div class="package-speed">100 Mbps</div>
+                        <div class="package-price">Rp 279.000</div>
+                        <div class="package-period">per bulan</div>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> Biaya Instalasi: Rp 0,-</li>
+                            <li><i class="fas fa-check-circle"></i> Unlimited Kuota</li>
+                            <li><i class="fas fa-check-circle"></i> Ideal untuk 5-7 device</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20FAMILY%20100%20Mbps" class="package-button">
                         <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
                     </a>
                 </div>
+                
+                <div class="package-card">
+                    <div class="package-card-content">
+                        <div class="package-name">SUPERUSER</div>
+                        <div class="package-speed">150 Mbps</div>
+                        <div class="package-price">Rp 299.000</div>
+                        <div class="package-period">per bulan</div>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> Biaya Instalasi: Rp 0,-</li>
+                            <li><i class="fas fa-check-circle"></i> Unlimited Kuota</li>
+                            <li><i class="fas fa-check-circle"></i> Streaming 4K & Gaming</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20SUPERUSER%20150%20Mbps" class="package-button">
+                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                    </a>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-card-content">
+                        <div class="package-name">PREMIUM</div>
+                        <div class="package-speed">200 Mbps</div>
+                        <div class="package-price">Rp 329.000</div>
+                        <div class="package-period">per bulan</div>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> Biaya Instalasi: Rp 0,-</li>
+                            <li><i class="fas fa-check-circle"></i> Unlimited Kuota</li>
+                            <li><i class="fas fa-check-circle"></i> Kebutuhan profesional</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20PREMIUM%20200%20Mbps" class="package-button">
+                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                    </a>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-card-content">
+                        <div class="package-name">ULTIMATE</div>
+                        <div class="package-speed">300 Mbps</div>
+                        <div class="package-price">Rp 400.000</div>
+                        <div class="package-period">per bulan</div>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> Biaya Instalasi: Rp 0,-</li>
+                            <li><i class="fas fa-check-circle"></i> Unlimited Kuota</li>
+                            <li><i class="fas fa-check-circle"></i> Small Office / Gamer Pro</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20ULTIMATE%20300%20Mbps" class="package-button">
+                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                    </a>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-card-content">
+                        <div class="package-name">ULTRA</div>
+                        <div class="package-speed">600 Mbps</div>
+                        <div class="package-price">Rp 500.000</div>
+                        <div class="package-period">per bulan</div>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> Biaya Instalasi: Rp 0,-</li>
+                            <li><i class="fas fa-check-circle"></i> Unlimited Kuota</li>
+                            <li><i class="fas fa-check-circle"></i> Performa Ekstrem</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20ULTRA%20600%20Mbps" class="package-button">
+                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                    </a>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-card-content">
+                        <div class="package-name">EXTREME</div>
+                        <div class="package-speed">1 Gbps</div>
+                        <div class="package-price">Rp 900.000</div>
+                        <div class="package-period">per bulan</div>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> Biaya Instalasi: Rp 0,-</li>
+                            <li><i class="fas fa-check-circle"></i> Unlimited Kuota</li>
+                            <li><i class="fas fa-check-circle"></i> Kecepatan Tertinggi</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20EXTREME%201%20Gbps" class="package-button">
+                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                    </a>
+                </div>
+
             </div>
+            <p class="ppn-disclaimer">Harga di atas belum termasuk PPN 11%</p>
         </div>
     </section>
+    <section class="packages" id="paket-combo" style="background: white;"> <div class="container">
+            <h2>Paket COMBO (Internet + TV)</h2>
+            <p class="packages-subtitle">Pilihan terbaik untuk internet cepat, channel TV, dan bonus kuota HP (FM Area).</p>
+            <div class="packages-grid">
 
-    <!-- Testimonials -->
+                <div class="package-card">
+                    <div class="package-card-content">
+                        <div class="package-name">JOY VALUE</div>
+                        <div class="package-speed">100 Mbps</div>
+                        <div class="package-details">98 TV Channel</div>
+                        <div class="package-sub-details">Bonus Kuota HP 25 GB (2 Member)</div>
+                        <div class="package-price">Rp 350.000</div>
+                        <div class="package-period">per bulan</div>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> Biaya Instalasi: Rp 0,-</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20COMBO%20JOY%20VALUE" class="package-button">
+                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                    </a>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-card-content">
+                        <div class="package-name">JOY PRO</div>
+                        <div class="package-speed">150 Mbps</div>
+                        <div class="package-details">99 TV Channel</div>
+                        <div class="package-sub-details">Bonus Kuota HP 50 GB (3 Member)</div>
+                        <div class="package-price">Rp 425.000</div>
+                        <div class="package-period">per bulan</div>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> Biaya Instalasi: Rp 0,-</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20COMBO%20JOY%20PRO" class="package-button">
+                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                    </a>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-card-content">
+                        <div class="package-name">JOY PREMIUM</div>
+                        <div class="package-speed">200 Mbps</div>
+                        <div class="package-details">167 TV Channel</div>
+                        <div class="package-sub-details">Bonus Kuota HP 50 GB (3 Member)</div>
+                        <div class="package-price">Rp 675.000</div>
+                        <div class="package-period">per bulan</div>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> Biaya Instalasi: Rp 0,-</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20COMBO%20JOY%20PREMIUM" class="package-button">
+                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                    </a>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-card-content">
+                        <div class="package-name">STAR VALUE</div>
+                        <div class="package-speed">300 Mbps</div>
+                        <div class="package-details">189 TV Channel (termasuk Viu)</div>
+                        <div class="package-sub-details">Bonus Kuota HP 100 GB (4 Member)</div>
+                        <div class="package-price">Rp 985.000</div>
+                        <div class="package-period">per bulan</div>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> Biaya Instalasi: Rp 0,-</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20COMBO%20STAR%20VALUE" class="package-button">
+                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                    </a>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-card-content">
+                        <div class="package-name">STAR PRO</div>
+                        <div class="package-speed">500 Mbps</div>
+                        <div class="package-details">191 TV Channel (termasuk Viu)</div>
+                        <div class="package-sub-details">Bonus Kuota HP 100 GB (4 Member)</div>
+                        <div class="package-price">Rp 1.850.000</div>
+                        <div class="package-period">per bulan</div>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> Biaya Instalasi: Rp 0,-</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20COMBO%20STAR%20PRO" class="package-button">
+                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                    </a>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-card-content">
+                        <div class="package-name">STAR PREMIUM</div>
+                        <div class="package-speed">1 Gbps</div>
+                        <div class="package-details">205 TV Channel (termasuk Viu, Netflix)</div>
+                        <div class="package-sub-details">Bonus Kuota HP 100 GB (4 Member)</div>
+                        <div class="package-price">Rp 4.500.000</div>
+                        <div class="package-period">per bulan</div>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> Biaya Instalasi: Rp 0,-</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20COMBO%20STAR%20PREMIUM" class="package-button">
+                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                    </a>
+                </div>
+
+            </div>
+            <p class="ppn-disclaimer">Harga di atas belum termasuk PPN 11%</p>
+        </div>
+    </section>
     <section class="testimonials">
         <div class="container">
             <h2>Kata Pelanggan XLSatu di Solo Raya</h2>
@@ -685,7 +911,6 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
             <h2>Siap Menikmati Internet Super Cepat?</h2>
@@ -696,7 +921,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -704,8 +928,8 @@
                 <p>Provider WiFi & Internet Rumahan Terpercaya</p>
             </div>
             <div class="footer-links">
-                <a href="#packages">Paket Internet</a>
-                <a href="#features">Keunggulan</a>
+                <a href="#paket-internet-only">Paket Internet Only</a>
+                <a href="#paket-combo">Paket Combo (Internet + TV)</a>
                 <a href="https://wa.me/6281578699460">Hubungi Kami</a>
             </div>
             <p>&copy; 2025 XLSatu. Semua Hak Dilindungi.</p>
@@ -713,27 +937,26 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20ingin%20tanya%20tentang%20internet%20rumah%20di%20Solo%20Raya" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Schema.org JSON-LD for SEO -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "XLSatu Internet Rumah Solo Raya",
         "description": "Provider internet rumah dan WiFi unlimited tercepat di Solo Raya dengan harga terjangkau",
-        "url": "https://xlsatu.com",
-        "telephone": "+6281578699460",
-        "priceRange": "Rp 225.000 - Rp 500.000",
-        "areaServed": [
+        "url": "https://[domain-anda.com]", "telephone": "+6281578699460",
+        "priceRange": "Rp 185.000 - Rp 4.500.000", "areaServed": [
             "Solo",
             "Surakarta",
             "Karanganyar",
-            "Boyolali (Sekitar Bandara Adi Sumarmo)",
-            "Sukoharjo"
+            "Boyolali",
+            "Sukoharjo",
+            "Klaten",
+            "Sragen",
+            "Wonogiri"
         ],
         "serviceType": "Internet Service Provider",
         "address": {
