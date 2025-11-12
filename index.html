@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internet Rumah Solo Raya Murah | XLSatu - WiFi Unlimited Tercepat</title>
-    <meta name="description" content="Paket internet rumah Solo, Surakarta, Karanganyar, Boyolali murah unlimited. XLSatu provider WiFi rumahan tercepat dengan harga terjangkau. Pasang sekarang!">
+    <meta name="description" content="Paket internet rumah Solo, Surakarta, Karanganyar, Boyolali, Sukoharjo, Kartasura murah unlimited. XLSatu provider WiFi rumahan tercepat dengan harga terjangkau. Pasang sekarang!">
     <meta name="keywords" content="internet rumah solo, wifi rumah solo, paket internet solo raya, internet unlimited solo, provider internet solo, pasang wifi solo, internet murah solo, internet cepat solo, xl home solo, internet rumahan surakarta">
     
     <meta property="og:title" content="XLSatu - Internet Rumah Solo Raya Tercepat">
@@ -43,7 +43,7 @@
             padding: 0 20px;
         }
 
-        /* [MODIFIKASI BARU] Top Bar */
+        /* Top Bar */
         .top-bar {
             background: var(--xl-blue-dark);
             color: var(--light-text);
@@ -69,7 +69,7 @@
             opacity: 1;
         }
         
-        /* [MODIFIKASI] Header */
+        /* Header */
         header {
             background: var(--card-bg); /* Latar belakang PUTIH */
             color: var(--dark-text);
@@ -94,8 +94,15 @@
             letter-spacing: 2px;
             color: var(--xl-blue-dark); /* Teks Logo Biru */
         }
+
+        /* MODIFIKASI: Menambahkan style untuk gambar logo */
+        .logo img {
+            height: 30px; /* Sesuaikan tinggi logo Anda */
+            width: auto;
+            vertical-align: middle; /* Agar sejajar rapi */
+        }
         
-        /* [MODIFIKASI] Tombol WA di Header */
+        /* Tombol WA di Header */
         .header-cta {
             background: var(--xl-blue-dark); /* Tombol Biru Solid */
             color: var(--light-text); /* Teks Putih */
@@ -111,7 +118,7 @@
             background: #073370; /* Biru lebih gelap saat hover */
         }
         
-        /* [MODIFIKASI] Hero Section */
+        /* Hero Section */
         .hero {
             background: var(--xl-blue-medium); /* Biru Medium Sesuai Screenshot */
             color: var(--light-text);
@@ -137,7 +144,7 @@
             opacity: 0.95;
         }
         
-        /* [MODIFIKASI] Tombol CTA di Hero (Style "Cari") */
+        /* Tombol CTA di Hero (Style "Cari") */
         .cta-button {
             display: inline-block;
             background: var(--card-bg); /* Latar Belakang PUTIH */
@@ -514,8 +521,9 @@
                 font-size: 14px;
             }
             
-            .logo {
-                font-size: 22px;
+            /* [MODIFIKASI] Logo di mobile */
+            .logo img {
+                height: 25px; /* Sedikit lebih kecil di mobile */
             }
 
             .package-name {
@@ -596,7 +604,11 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">XLSatu</div>
+                
+                <div class="logo">
+                    <img src="xlsatu.webp" alt="XLSatu Logo">
+                </div>
+                
                 <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20paket%20internet%20rumah%20di%20Solo%20Raya" class="header-cta">
                     <i class="fab fa-whatsapp"></i> Hubungi Kami
                 </a>
@@ -606,8 +618,9 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Butuh Bantuan? Kami Siap Membantu!</h1> <h2>Internet Rumah Solo Raya Tercepat & Termurah</h2>
-            <p>Provider internet rumahan terpercaya di Solo, Karanganyar, Boyolali, Sukoharjo, Klaten, Sragen, & Wonogiri</p>
+            <h1>Butuh Bantuan? Kami Siap Membantu!</h1>
+            <h2>Internet Rumah Solo Raya Tercepat & Termurah</h2>
+            <p>Provider internet rumahan terpercaya di Solo, Karanganyar, Boyolali, Sukoharjo</p>
             <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20ingin%20berlangganan%20internet%20rumah%20di%20Solo%20Raya.%20Mohon%20info%20lengkapnya." class="cta-button">
                 <i class="fab fa-whatsapp"></i> Pasang Sekarang via WhatsApp
             </a>
@@ -841,7 +854,8 @@
         </div>
     </section>
     
-    <section class="packages" id="paket-combo" style="background: var(--card-bg);"> <div class="container">
+    <section class="packages" id="paket-combo" style="background: var(--card-bg);">
+        <div class="container">
             <h2>Paket COMBO (Internet + TV)</h2>
             <p class="packages-subtitle">Pilihan terbaik untuk internet cepat, channel TV, dan bonus kuota HP (FM Area).</p>
             <div class="packages-grid">
