@@ -3,87 +3,749 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Internet XL Home Solo - Cepat, Murah & Stabil | Promo Pasang!</title>
+    <title>Internet Rumah Solo Raya Murah | XLSatu - WiFi Unlimited Tercepat</title>
+    <meta name="description" content="Paket internet rumah Solo, Surakarta, Karanganyar, Boyolali murah unlimited. XLSatu provider WiFi rumahan tercepat dengan harga terjangkau. Pasang sekarang!">
+    <meta name="keywords" content="internet rumah solo, wifi rumah solo, paket internet solo raya, internet unlimited solo, provider internet solo, pasang wifi solo, internet murah solo, internet cepat solo, xl home solo, internet rumahan surakarta">
     
-    <meta name="description" content="Mencari internet cepat & stabil di Solo? XL Home (d/h First Media) hadir di Solo, Sukoharjo, Klaten, Boyolali, Karanganyar & sekitarnya. Cek promo paket murah di sini!">
-
-    <link rel="canonical" href="https://[domain-anda.com]/">
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="XLSatu - Internet Rumah Solo Raya Tercepat">
+    <meta property="og:description" content="Paket internet rumah unlimited murah di Solo Raya. Pasang sekarang dan nikmati WiFi super cepat!">
     
-    <meta property="og:title" content="Internet XL Home Solo - Cepat, Murah & Stabil">
-    <meta property="og:description" content="Paket internet rumah cepat, murah, dan stabil dari XL Home (d/h First Media) kini hadir di Solo Raya. Dapatkan promo pasang baru!">
-    <meta property="og:image" content="https://[domain-anda.com]/gambar-promo-xl-solo.jpg"> <meta property="og:url" content="https://[domain-anda.com]/">
-    <meta property="og:type" content="website">
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .header-cta {
+            background: white;
+            color: #667eea;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        
+        .header-cta:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .hero h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 18px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+        }
+        
+        .cta-button:hover {
+            background: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
+        }
+        
+        .cta-button i {
+            margin-right: 10px;
+        }
+        
+        /* Coverage Area */
+        .coverage {
+            background: #f8f9fa;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .coverage h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+        
+        .coverage-areas {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .area-badge {
+            background: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-weight: 600;
+        }
+        
+        /* Features */
+        .features {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #667eea;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            background: #f8f9fa;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        /* Packages */
+        .packages {
+            padding: 80px 0;
+            background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+        }
+        
+        .packages h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+        
+        .packages-subtitle {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 50px;
+            color: #666;
+        }
+        
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .package-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(102, 126, 234, 0.3);
+        }
+        
+        .package-card.popular {
+            border: 3px solid #667eea;
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: #667eea;
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .package-name {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        
+        .package-speed {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .package-price {
+            font-size: 36px;
+            font-weight: bold;
+            color: #764ba2;
+            margin-bottom: 5px;
+        }
+        
+        .package-period {
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+        
+        .package-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .package-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .package-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .package-features i {
+            color: #25D366;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        
+        .package-button {
+            display: block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 50px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .package-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #667eea;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .testimonial-location {
+            color: #999;
+            font-size: 14px;
+        }
+        
+        .stars {
+            color: #ffc107;
+            margin-bottom: 15px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: #667eea;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero h2 {
+                font-size: 20px;
+            }
+            
+            .package-speed {
+                font-size: 36px;
+            }
+            
+            .package-price {
+                font-size: 28px;
+            }
+            
+            .header-cta {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+            
+            .logo {
+                font-size: 22px;
+            }
+        }
+        
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+    </style>
 </head>
 <body>
-
+    <!-- Header -->
     <header>
-        <nav>
-            <a href="#paket">Paket Unggulan</a>
-            <a href="#area">Area Jangkauan</a>
-            <a href="#kontak">Hubungi Kami</a>
-        </nav>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">XLSatu</div>
+                <a href="https://wa.me/6281234567890?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20paket%20internet%20rumah%20di%20Solo%20Raya" class="header-cta">
+                    <i class="fab fa-whatsapp"></i> Hubungi Kami
+                </a>
+            </div>
+        </div>
     </header>
 
-    <main>
-        
-        <section class="hero">
-            <h1>Internet Rumah Cepat, Murah, & Stabil di Solo dari XL Home</h1>
-            <p>Koneksi internet fiber optic super cepat dan stabil dari XL Home (dulu First Media) kini hadir di Solo Raya. Nikmati internet tanpa batas untuk keluarga!</p>
-            <a href="https://wa.me/62[NomorAdikAnda]?text=Halo, saya tertarik pasang internet XL Home..." class="cta-button">Cek Promo & Daftar Sekarang</a>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Internet Rumah Solo Raya Tercepat & Termurah</h1>
+            <h2>WiFi Unlimited dengan Kecepatan Hingga 100 Mbps</h2>
+            <p>Nikmati streaming, gaming, dan bekerja tanpa batas dengan XLSatu - Provider internet rumahan terpercaya di Solo Raya</p>
+            <a href="https://wa.me/6281234567890?text=Halo%20XLSatu,%20saya%20ingin%20berlangganan%20internet%20rumah%20di%20Solo%20Raya.%20Mohon%20info%20lengkapnya." class="cta-button">
+                <i class="fab fa-whatsapp"></i> Pasang Sekarang via WhatsApp
+            </a>
+        </div>
+    </section>
 
-        <section id="keunggulan">
-            <h2>Kenapa Memilih Internet XL Home Solo?</h2>
-            
-            <article>
-                <h3>Internet Cepat & Stabil</h3>
-                <p>Nikmati koneksi fiber optic anti lemot untuk streaming, kerja, dan sekolah.</p>
-                <img src="icon-cepat.png" alt="Ikon Internet Cepat XL Home">
-            </article>
-            <article>
-                <h3>Harga Paket Murah</h3>
-                <p>Paket internet murah mulai dari [harga] per bulan, tanpa batas kuota.</p>
-                <img src="icon-murah.png" alt="Ikon Harga Murah Internet XL">
-            </article>
-            <article>
-                <h3>Jangkauan Luas</h3>
-                <p>Layanan kami mencakup Kota Solo, Sukoharjo, Klaten, Boyolali, dan lainnya.</p>
-                <img src="icon-area.png" alt="Ikon Jangkauan Area Solo Raya">
-            </article>
-        </section>
+    <!-- Coverage Area -->
+    <section class="coverage">
+        <div class="container">
+            <h3><i class="fas fa-map-marker-alt"></i> Area Layanan XLSatu</h3>
+            <div class="coverage-areas">
+                <span class="area-badge">Solo / Surakarta</span>
+                <span class="area-badge">Karanganyar</span>
+                <span class="area-badge">Boyolali</span>
+                <span class="area-badge">Sukoharjo</span>
+                <span class="area-badge">Klaten</span>
+                <span class="area-badge">Sragen</span>
+                <span class="area-badge">Wonogiri</span>
+            </div>
+        </div>
+    </section>
 
-        <section id="paket">
-            <h2>Paket Internet XL Home Paling Laris</h2>
-            </section>
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2>Kenapa Pilih XLSatu untuk Internet Rumah Anda?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Kecepatan Super</h3>
+                    <p>Koneksi internet hingga 100 Mbps untuk streaming 4K, gaming online tanpa lag</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3>Unlimited Kuota</h3>
+                    <p>Tanpa batas kuota, browsing dan download sepuasnya 24/7</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Support 24/7</h3>
+                    <p>Tim customer service siap membantu kapan saja</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3>Harga Terjangkau</h3>
+                    <p>Paket internet murah mulai dari Rp 200 ribuan per bulan</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Gratis Instalasi</h3>
+                    <p>Biaya pemasangan gratis untuk pelanggan baru</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Jaringan Stabil</h3>
+                    <p>Koneksi stabil dengan uptime 99.9%</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="area">
-            <h2>Area Jangkauan Kami di Solo Raya</h2>
-            <p>Layanan pasang baru internet XL Home telah menjangkau area-area berikut:</p>
-            <ul>
-                <li>Surakarta (Solo)</li>
-                <li>Sukoharjo</li>
-                <li>Boyolali</li>
-                <li>Klaten</li>
-                <li>Karanganyar</li>
-                <li>Wonogiri</li>
-                <li>Sragen</li>
-            </ul>
-        </section>
+    <!-- Packages -->
+    <section class="packages">
+        <div class="container">
+            <h2>Paket Internet Rumah Solo Raya</h2>
+            <p class="packages-subtitle">Pilih paket yang sesuai dengan kebutuhan internet Anda</p>
+            <div class="packages-grid">
+                <!-- Basic Package -->
+                <div class="package-card">
+                    <div class="package-name">Paket Basic</div>
+                    <div class="package-speed">20 Mbps</div>
+                    <div class="package-price">Rp 225.000</div>
+                    <div class="package-period">per bulan</div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check-circle"></i> Kecepatan 20 Mbps</li>
+                        <li><i class="fas fa-check-circle"></i> Unlimited Kuota</li>
+                        <li><i class="fas fa-check-circle"></i> Gratis Instalasi</li>
+                        <li><i class="fas fa-check-circle"></i> Support 24/7</li>
+                        <li><i class="fas fa-check-circle"></i> Cocok untuk 2-3 device</li>
+                        <li><i class="fas fa-check-circle"></i> Browsing & streaming HD</li>
+                    </ul>
+                    <a href="https://wa.me/6281234567890?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20Basic%2020%20Mbps%20di%20Solo%20Raya" class="package-button">
+                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                    </a>
+                </div>
 
-        <section id="kontak">
-            <h2>Tunggu Apa Lagi? Pasang Internet XL Home Sekarang!</h2>
-            <p>Hubungi kami via WhatsApp untuk konsultasi gratis dan pengecekan jaringan di lokasi Anda.</p>
-            <a href="https://wa.me/62[NomorAdikAnda]?text=Halo, saya tertarik pasang internet XL Home..." class="cta-button">Tanya via WhatsApp</a>
-        </section>
+                <!-- Premium Package (Popular) -->
+                <div class="package-card popular">
+                    <div class="popular-badge">TERPOPULER</div>
+                    <div class="package-name">Paket Premium</div>
+                    <div class="package-speed">50 Mbps</div>
+                    <div class="package-price">Rp 350.000</div>
+                    <div class="package-period">per bulan</div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check-circle"></i> Kecepatan 50 Mbps</li>
+                        <li><i class="fas fa-check-circle"></i> Unlimited Kuota</li>
+                        <li><i class="fas fa-check-circle"></i> Gratis Instalasi</li>
+                        <li><i class="fas fa-check-circle"></i> Priority Support 24/7</li>
+                        <li><i class="fas fa-check-circle"></i> Cocok untuk 4-6 device</li>
+                        <li><i class="fas fa-check-circle"></i> Streaming 4K & gaming online</li>
+                        <li><i class="fas fa-check-circle"></i> Work from home lancar</li>
+                    </ul>
+                    <a href="https://wa.me/6281234567890?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20Premium%2050%20Mbps%20di%20Solo%20Raya" class="package-button">
+                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                    </a>
+                </div>
 
-    </main>
+                <!-- Ultra Package -->
+                <div class="package-card">
+                    <div class="package-name">Paket Ultra</div>
+                    <div class="package-speed">100 Mbps</div>
+                    <div class="package-price">Rp 500.000</div>
+                    <div class="package-period">per bulan</div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check-circle"></i> Kecepatan 100 Mbps</li>
+                        <li><i class="fas fa-check-circle"></i> Unlimited Kuota</li>
+                        <li><i class="fas fa-check-circle"></i> Gratis Instalasi</li>
+                        <li><i class="fas fa-check-circle"></i> VIP Support 24/7</li>
+                        <li><i class="fas fa-check-circle"></i> Cocok untuk 8+ device</li>
+                        <li><i class="fas fa-check-circle"></i> Streaming 4K multiple device</li>
+                        <li><i class="fas fa-check-circle"></i> Gaming pro & bisnis online</li>
+                        <li><i class="fas fa-check-circle"></i> Kecepatan maksimal</li>
+                    </ul>
+                    <a href="https://wa.me/6281234567890?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20Ultra%20100%20Mbps%20di%20Solo%20Raya" class="package-button">
+                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Kata Pelanggan XLSatu di Solo Raya</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Internet XLSatu di Solo koneksinya stabil banget! Buat kerja WFH dan meeting Zoom lancar jaya. Harga juga terjangkau untuk kecepatan segini."</p>
+                    <div class="testimonial-author">Budi Santoso</div>
+                    <div class="testimonial-location">Solo, Jawa Tengah</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Sudah setahun pakai XLSatu di Karanganyar, puas banget! Nonton Netflix 4K lancar, main game online ping kecil. Recommended!"</p>
+                    <div class="testimonial-author">Siti Aminah</div>
+                    <div class="testimonial-location">Karanganyar, Jawa Tengah</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Pelayanan customer service nya ramah dan cepat tanggap. Pasang internet rumah di Boyolali jadi mudah dengan XLSatu."</p>
+                    <div class="testimonial-author">Ahmad Rifai</div>
+                    <div class="testimonial-location">Boyolali, Jawa Tengah</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Siap Menikmati Internet Super Cepat?</h2>
+            <p>Dapatkan promo spesial untuk pelanggan baru di Solo Raya!</p>
+            <a href="https://wa.me/6281234567890?text=Halo%20XLSatu,%20saya%20ingin%20info%20promo%20dan%20paket%20internet%20rumah%20terbaru%20di%20Solo%20Raya" class="cta-button">
+                <i class="fab fa-whatsapp"></i> Chat Sales via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 [Nama Brand Anda/Adik Anda] - Sales Resmi Internet XL Home Solo Raya</p>
+        <div class="container">
+            <div class="footer-content">
+                <h3>XLSatu - Internet Rumah Solo Raya</h3>
+                <p>Provider WiFi & Internet Rumahan Terpercaya</p>
+            </div>
+            <div class="footer-links">
+                <a href="#packages">Paket Internet</a>
+                <a href="#features">Keunggulan</a>
+                <a href="https://wa.me/6281234567890">Hubungi Kami</a>
+            </div>
+            <p>&copy; 2025 XLSatu. Semua Hak Dilindungi.</p>
+            <p style="margin-top: 10px; font-size: 14px; color: #bbb;">Melayani: Internet Rumah Solo, WiFi Surakarta, Paket Internet Karanganyar, Boyolali, Sukoharjo, Klaten, Sragen, Wonogiri</p>
+        </div>
     </footer>
 
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281234567890?text=Halo%20XLSatu,%20saya%20ingin%20tanya%20tentang%20internet%20rumah%20di%20Solo%20Raya" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Schema.org JSON-LD for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "XLSatu Internet Rumah Solo Raya",
+        "description": "Provider internet rumah dan WiFi unlimited tercepat di Solo Raya dengan harga terjangkau",
+        "url": "https://xlsatu.com",
+        "telephone": "+6281234567890",
+        "priceRange": "Rp 225.000 - Rp 500.000",
+        "areaServed": [
+            "Solo",
+            "Surakarta",
+            "Karanganyar",
+            "Boyolali",
+            "Sukoharjo",
+            "Klaten",
+            "Sragen",
+            "Wonogiri"
+        ],
+        "serviceType": "Internet Service Provider",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Solo",
+            "addressRegion": "Jawa Tengah",
+            "addressCountry": "ID"
+        }
+    }
+    </script>
 </body>
 </html>
