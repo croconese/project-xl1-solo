@@ -13,12 +13,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Variabel Warna Baru Sesuai Brand XL */
+        /* Variabel Warna Baru Sesuai Screenshot */
         :root {
-            --xl-blue: #0057FF; /* Biru utama XL */
-            --xl-yellow: #FFD200; /* Kuning aksen */
-            --dark-text: #333333;
+            --xl-blue-dark: #0B4393; /* Biru tua untuk teks, header, topbar */
+            --xl-blue-medium: #3C84CA; /* Biru medium untuk hero background */
+            --xl-teal: #00A3E0; /* Aksen 'satu' */
             --light-text: #ffffff;
+            --dark-text: #333333;
             --body-bg: #f8f9fa;
             --card-bg: #ffffff;
             --border-color: #eeeeee;
@@ -41,16 +42,43 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-        
-        /* Header */
-        header {
-            background: var(--xl-blue); /* WARNA BARU */
+
+        /* [MODIFIKASI BARU] Top Bar */
+        .top-bar {
+            background: var(--xl-blue-dark);
             color: var(--light-text);
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-links a {
+            color: var(--light-text);
+            text-decoration: none;
+            margin-left: 20px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .top-bar-links a:hover {
+            opacity: 1;
+        }
+        
+        /* [MODIFIKASI] Header */
+        header {
+            background: var(--card-bg); /* Latar belakang PUTIH */
+            color: var(--dark-text);
             padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-bottom: 1px solid var(--border-color);
         }
         
         .header-content {
@@ -64,25 +92,28 @@
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 2px;
+            color: var(--xl-blue-dark); /* Teks Logo Biru */
         }
         
+        /* [MODIFIKASI] Tombol WA di Header */
         .header-cta {
-            background: var(--light-text); /* WARNA BARU */
-            color: var(--xl-blue); /* WARNA BARU */
+            background: var(--xl-blue-dark); /* Tombol Biru Solid */
+            color: var(--light-text); /* Teks Putih */
             padding: 10px 25px;
             border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
-            transition: transform 0.3s;
+            transition: all 0.3s;
         }
         
         .header-cta:hover {
             transform: scale(1.05);
+            background: #073370; /* Biru lebih gelap saat hover */
         }
         
-        /* Hero Section */
+        /* [MODIFIKASI] Hero Section */
         .hero {
-            background: var(--xl-blue); /* WARNA BARU */
+            background: var(--xl-blue-medium); /* Biru Medium Sesuai Screenshot */
             color: var(--light-text);
             padding: 80px 0;
             text-align: center;
@@ -91,7 +122,7 @@
         .hero h1 {
             font-size: 48px;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
         }
         
         .hero h2 {
@@ -106,28 +137,28 @@
             opacity: 0.95;
         }
         
+        /* [MODIFIKASI] Tombol CTA di Hero (Style "Cari") */
         .cta-button {
             display: inline-block;
-            background: var(--xl-yellow); /* WARNA BARU */
-            color: var(--dark-text); /* WARNA BARU */
+            background: var(--card-bg); /* Latar Belakang PUTIH */
+            color: var(--xl-blue-dark); /* Teks Biru */
             padding: 18px 50px;
             border-radius: 50px;
             text-decoration: none;
             font-size: 20px;
             font-weight: bold;
             transition: all 0.3s;
-            box-shadow: 0 5px 15px rgba(255, 210, 0, 0.4); /* WARNA BARU */
+            box-shadow: 0 5px 15px rgba(0,0,0, 0.1);
         }
         
         .cta-button:hover {
-            background: #ffd933; /* WARNA BARU */
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 210, 0, 0.6); /* WARNA BARU */
+            box-shadow: 0 8px 20px rgba(0,0,0, 0.2);
         }
         
         .cta-button i {
             margin-right: 10px;
-            color: #00A3E0; /* Warna ikon WA biru */
+            color: #25D366; /* Ikon WA tetap hijau */
         }
         
         /* Coverage Area */
@@ -140,7 +171,7 @@
         .coverage h3 {
             font-size: 24px;
             margin-bottom: 20px;
-            color: var(--xl-blue); /* WARNA BARU */
+            color: var(--xl-blue-dark); /* Biru Tua */
         }
         
         .coverage-areas {
@@ -168,7 +199,7 @@
             text-align: center;
             font-size: 36px;
             margin-bottom: 50px;
-            color: var(--xl-blue); /* WARNA BARU */
+            color: var(--xl-blue-dark); /* Biru Tua */
         }
         
         .features-grid {
@@ -192,7 +223,7 @@
         
         .feature-icon {
             font-size: 48px;
-            color: var(--xl-blue); /* WARNA BARU */
+            color: var(--xl-blue-dark); /* Biru Tua */
             margin-bottom: 20px;
         }
         
@@ -212,7 +243,7 @@
             text-align: center;
             font-size: 36px;
             margin-bottom: 20px;
-            color: var(--xl-blue); /* WARNA BARU */
+            color: var(--xl-blue-dark); /* Biru Tua */
         }
         
         .packages-subtitle {
@@ -230,57 +261,55 @@
             margin: 0 auto;
         }
         
-        /* DESAIN CARD BARU */
+        /* Desain Card */
         .package-card {
             background: var(--card-bg);
             border-radius: 20px;
-            padding: 0; /* Ubah padding */
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05); /* Shadow lebih halus */
+            padding: 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            border: 1px solid var(--border-color); /* Border halus */
+            border: 1px solid var(--border-color);
         }
         
         .package-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 87, 255, 0.1); /* Shadow biru */
+            box-shadow: 0 15px 30px rgba(0, 87, 255, 0.1);
         }
         
-        /* Konten di dalam card */
         .package-card-content {
              flex-grow: 1;
-             padding: 30px; /* Padding baru */
+             padding: 30px;
         }
         
         .package-card.popular {
-            border: 3px solid var(--xl-blue); /* Border biru */
+            border: 3px solid var(--xl-blue-dark);
         }
         
         .popular-badge {
             position: absolute;
             top: 15px;
             right: -35px;
-            background: var(--xl-yellow); /* WARNA BARU */
-            color: var(--dark-text); /* WARNA BARU */
+            background: var(--xl-teal); /* Badge pakai warna Teal */
+            color: var(--light-text);
             padding: 5px 40px;
             transform: rotate(45deg);
             font-size: 12px;
             font-weight: bold;
         }
         
-        /* Header Card Baru */
         .package-name {
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 15px;
-            color: var(--light-text); /* WARNA BARU */
-            background: var(--xl-blue); /* WARNA BARU */
-            padding: 20px 30px; /* Padding header card */
-            margin: 0 0 20px 0; /* Posisi header card */
-            border-radius: 18px 18px 0 0; /* Radius di atas saja */
+            color: var(--light-text);
+            background: var(--xl-blue-dark); /* Header Card Biru Tua */
+            padding: 20px 30px;
+            margin: 0 0 20px 0;
+            border-radius: 18px 18px 0 0;
         }
         
         .package-speed {
@@ -293,7 +322,7 @@
         .package-price {
             font-size: 36px;
             font-weight: bold;
-            color: var(--xl-blue); /* WARNA BARU */
+            color: var(--xl-blue-dark); /* Harga jadi Biru Tua */
             margin-bottom: 5px;
         }
         
@@ -338,24 +367,25 @@
             margin-bottom: 20px;
         }
         
-        /* Tombol Card Baru */
+        /* [MODIFIKASI] Tombol Card */
         .package-button {
             display: block;
-            background: var(--xl-yellow); /* WARNA BARU */
-            color: var(--dark-text); /* WARNA BARU */
+            background: var(--card-bg); /* Latar Belakang PUTIH */
+            color: var(--xl-blue-dark); /* Teks Biru */
             padding: 15px;
             border-radius: 50px;
             text-decoration: none;
             text-align: center;
             font-weight: bold;
             transition: all 0.3s;
-            margin: 0 30px 30px 30px; /* Padding tombol */
+            margin: 0 30px 30px 30px;
+            border: 2px solid var(--xl-blue-dark); /* Border Biru */
         }
         
         .package-button:hover {
             transform: scale(1.05);
-            background: #ffd933; /* WARNA BARU */
-            box-shadow: 0 5px 20px rgba(255, 210, 0, 0.4); /* WARNA BARU */
+            background: var(--xl-blue-dark); /* Hover: Latar Biru */
+            color: var(--light-text); /* Hover: Teks Putih */
         }
         
         .ppn-disclaimer {
@@ -376,7 +406,7 @@
             text-align: center;
             font-size: 36px;
             margin-bottom: 50px;
-            color: var(--xl-blue); /* WARNA BARU */
+            color: var(--xl-blue-dark); /* Biru Tua */
         }
         
         .testimonials-grid {
@@ -401,7 +431,7 @@
         
         .testimonial-author {
             font-weight: bold;
-            color: var(--xl-blue); /* WARNA BARU */
+            color: var(--xl-blue-dark); /* Biru Tua */
         }
         
         .testimonial-location {
@@ -410,13 +440,13 @@
         }
         
         .stars {
-            color: var(--xl-yellow); /* WARNA BARU */
+            color: #FFD200; /* Bintang kita biarkan kuning */
             margin-bottom: 15px;
         }
         
-        /* CTA Section */
+        /* [MODIFIKASI] CTA Section */
         .cta-section {
-            background: var(--xl-blue); /* WARNA BARU */
+            background: var(--xl-blue-medium); /* Biru Medium */
             color: var(--light-text);
             padding: 80px 0;
             text-align: center;
@@ -458,7 +488,7 @@
         }
         
         .footer-links a:hover {
-            color: var(--xl-yellow); /* WARNA BARU */
+            color: var(--xl-teal); /* Hover jadi teal */
         }
         
         /* Responsive */
@@ -488,7 +518,6 @@
                 font-size: 22px;
             }
 
-            /* Perbaikan card header di mobile */
             .package-name {
                 font-size: 22px;
                 padding: 15px 20px;
@@ -500,6 +529,11 @@
 
             .package-button {
                 margin: 0 20px 20px 20px;
+            }
+
+            /* Sembunyikan top-bar di mobile agar hemat tempat */
+            .top-bar {
+                display: none;
             }
         }
         
@@ -541,8 +575,24 @@
             }
         }
     </style>
-    </head>
+</head>
 <body>
+    
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-promo">
+                    <span>Sales Resmi XL SATU Solo Raya</span>
+                </div>
+                <div class="top-bar-links">
+                    <a href="#paket-internet-only">XL SATU Fiber</a>
+                    <a href="#paket-combo">XL SATU Biz</a>
+                    <a href="#coverage">Blog & Artikel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header>
         <div class="container">
             <div class="header-content">
@@ -556,16 +606,15 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Internet Rumah Solo Raya Tercepat & Termurah</h1>
-            <h2>WiFi Unlimited dengan Kecepatan Hingga 1 Gbps</h2>
-            <p>Nikmati streaming, gaming, dan bekerja tanpa batas dengan XLSatu - Provider internet rumahan terpercaya di Solo Raya</p>
+            <h1>Butuh Bantuan? Kami Siap Membantu!</h1> <h2>Internet Rumah Solo Raya Tercepat & Termurah</h2>
+            <p>Provider internet rumahan terpercaya di Solo, Karanganyar, Boyolali, Sukoharjo, Klaten, Sragen, & Wonogiri</p>
             <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20ingin%20berlangganan%20internet%20rumah%20di%20Solo%20Raya.%20Mohon%20info%20lengkapnya." class="cta-button">
                 <i class="fab fa-whatsapp"></i> Pasang Sekarang via WhatsApp
             </a>
         </div>
     </section>
 
-    <section class="coverage">
+    <section class="coverage" id="coverage">
         <div class="container">
             <h3><i class="fas fa-map-marker-alt"></i> Area Layanan XLSatu</h3>
             <div class="coverage-areas">
