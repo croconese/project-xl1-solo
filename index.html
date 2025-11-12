@@ -13,6 +13,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+        /* Variabel Warna Baru Sesuai Brand XL */
+        :root {
+            --xl-blue: #0057FF; /* Biru utama XL */
+            --xl-yellow: #FFD200; /* Kuning aksen */
+            --dark-text: #333333;
+            --light-text: #ffffff;
+            --body-bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --border-color: #eeeeee;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -22,7 +33,7 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--dark-text);
         }
         
         .container {
@@ -33,8 +44,8 @@
         
         /* Header */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: var(--xl-blue); /* WARNA BARU */
+            color: var(--light-text);
             padding: 15px 0;
             position: sticky;
             top: 0;
@@ -56,8 +67,8 @@
         }
         
         .header-cta {
-            background: white;
-            color: #667eea;
+            background: var(--light-text); /* WARNA BARU */
+            color: var(--xl-blue); /* WARNA BARU */
             padding: 10px 25px;
             border-radius: 25px;
             text-decoration: none;
@@ -71,8 +82,8 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: var(--xl-blue); /* WARNA BARU */
+            color: var(--light-text);
             padding: 80px 0;
             text-align: center;
         }
@@ -97,30 +108,31 @@
         
         .cta-button {
             display: inline-block;
-            background: #25D366;
-            color: white;
+            background: var(--xl-yellow); /* WARNA BARU */
+            color: var(--dark-text); /* WARNA BARU */
             padding: 18px 50px;
             border-radius: 50px;
             text-decoration: none;
             font-size: 20px;
             font-weight: bold;
             transition: all 0.3s;
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 5px 15px rgba(255, 210, 0, 0.4); /* WARNA BARU */
         }
         
         .cta-button:hover {
-            background: #128C7E;
+            background: #ffd933; /* WARNA BARU */
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
+            box-shadow: 0 8px 20px rgba(255, 210, 0, 0.6); /* WARNA BARU */
         }
         
         .cta-button i {
             margin-right: 10px;
+            color: #00A3E0; /* Warna ikon WA biru */
         }
         
         /* Coverage Area */
         .coverage {
-            background: #f8f9fa;
+            background: var(--body-bg);
             padding: 40px 0;
             text-align: center;
         }
@@ -128,7 +140,7 @@
         .coverage h3 {
             font-size: 24px;
             margin-bottom: 20px;
-            color: #667eea;
+            color: var(--xl-blue); /* WARNA BARU */
         }
         
         .coverage-areas {
@@ -139,7 +151,7 @@
         }
         
         .area-badge {
-            background: white;
+            background: var(--card-bg);
             padding: 12px 25px;
             border-radius: 25px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -149,14 +161,14 @@
         /* Features */
         .features {
             padding: 60px 0;
-            background: white;
+            background: var(--card-bg);
         }
         
         .features h2 {
             text-align: center;
             font-size: 36px;
             margin-bottom: 50px;
-            color: #667eea;
+            color: var(--xl-blue); /* WARNA BARU */
         }
         
         .features-grid {
@@ -169,7 +181,7 @@
             text-align: center;
             padding: 30px;
             border-radius: 15px;
-            background: #f8f9fa;
+            background: var(--body-bg);
             transition: transform 0.3s;
         }
         
@@ -180,27 +192,27 @@
         
         .feature-icon {
             font-size: 48px;
-            color: #667eea;
+            color: var(--xl-blue); /* WARNA BARU */
             margin-bottom: 20px;
         }
         
         .feature-card h3 {
             font-size: 22px;
             margin-bottom: 10px;
-            color: #333;
+            color: var(--dark-text);
         }
         
         /* Packages */
         .packages {
             padding: 80px 0;
-            background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+            background: var(--body-bg);
         }
         
         .packages h2 {
             text-align: center;
             font-size: 36px;
             margin-bottom: 20px;
-            color: #667eea;
+            color: var(--xl-blue); /* WARNA BARU */
         }
         
         .packages-subtitle {
@@ -218,61 +230,70 @@
             margin: 0 auto;
         }
         
+        /* DESAIN CARD BARU */
         .package-card {
-            background: white;
+            background: var(--card-bg);
             border-radius: 20px;
-            padding: 40px 30px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            padding: 0; /* Ubah padding */
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05); /* Shadow lebih halus */
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
-            display: flex; /* MODIFIKASI: Menambahkan flexbox */
-            flex-direction: column; /* MODIFIKASI: Agar tombol tetap di bawah */
-        }
-
-        .package-card-content {
-             flex-grow: 1; /* MODIFIKASI: Mendorong tombol ke bawah */
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border-color); /* Border halus */
         }
         
         .package-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 50px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 15px 30px rgba(0, 87, 255, 0.1); /* Shadow biru */
+        }
+        
+        /* Konten di dalam card */
+        .package-card-content {
+             flex-grow: 1;
+             padding: 30px; /* Padding baru */
         }
         
         .package-card.popular {
-            border: 3px solid #667eea;
+            border: 3px solid var(--xl-blue); /* Border biru */
         }
         
         .popular-badge {
             position: absolute;
-            top: 20px;
+            top: 15px;
             right: -35px;
-            background: #667eea;
-            color: white;
+            background: var(--xl-yellow); /* WARNA BARU */
+            color: var(--dark-text); /* WARNA BARU */
             padding: 5px 40px;
             transform: rotate(45deg);
             font-size: 12px;
             font-weight: bold;
         }
         
+        /* Header Card Baru */
         .package-name {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: bold;
             margin-bottom: 15px;
-            color: #667eea;
+            color: var(--light-text); /* WARNA BARU */
+            background: var(--xl-blue); /* WARNA BARU */
+            padding: 20px 30px; /* Padding header card */
+            margin: 0 0 20px 0; /* Posisi header card */
+            border-radius: 18px 18px 0 0; /* Radius di atas saja */
         }
         
         .package-speed {
             font-size: 48px;
             font-weight: bold;
-            color: #333;
+            color: var(--dark-text);
             margin-bottom: 10px;
         }
         
         .package-price {
             font-size: 36px;
             font-weight: bold;
-            color: #764ba2;
+            color: var(--xl-blue); /* WARNA BARU */
             margin-bottom: 5px;
         }
         
@@ -304,10 +325,9 @@
             font-size: 18px;
         }
 
-        /* MODIFIKASI: CSS untuk detail tambahan (TV, Bonus, dll) */
         .package-details {
             font-size: 18px;
-            color: #333;
+            color: var(--dark-text);
             font-weight: 600;
             margin-bottom: 10px;
         }
@@ -318,25 +338,26 @@
             margin-bottom: 20px;
         }
         
+        /* Tombol Card Baru */
         .package-button {
             display: block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: var(--xl-yellow); /* WARNA BARU */
+            color: var(--dark-text); /* WARNA BARU */
             padding: 15px;
             border-radius: 50px;
             text-decoration: none;
             text-align: center;
             font-weight: bold;
             transition: all 0.3s;
-            margin-top: auto; /* MODIFIKASI: Menempelkan tombol di bawah */
+            margin: 0 30px 30px 30px; /* Padding tombol */
         }
         
         .package-button:hover {
             transform: scale(1.05);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            background: #ffd933; /* WARNA BARU */
+            box-shadow: 0 5px 20px rgba(255, 210, 0, 0.4); /* WARNA BARU */
         }
-
-        /* MODIFIKASI: CSS untuk disclaimer PPN */
+        
         .ppn-disclaimer {
             text-align: center;
             font-size: 16px;
@@ -348,14 +369,14 @@
         /* Testimonials */
         .testimonials {
             padding: 80px 0;
-            background: #f8f9fa;
+            background: var(--body-bg);
         }
         
         .testimonials h2 {
             text-align: center;
             font-size: 36px;
             margin-bottom: 50px;
-            color: #667eea;
+            color: var(--xl-blue); /* WARNA BARU */
         }
         
         .testimonials-grid {
@@ -365,7 +386,7 @@
         }
         
         .testimonial-card {
-            background: white;
+            background: var(--card-bg);
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
@@ -380,7 +401,7 @@
         
         .testimonial-author {
             font-weight: bold;
-            color: #667eea;
+            color: var(--xl-blue); /* WARNA BARU */
         }
         
         .testimonial-location {
@@ -389,14 +410,14 @@
         }
         
         .stars {
-            color: #ffc107;
+            color: var(--xl-yellow); /* WARNA BARU */
             margin-bottom: 15px;
         }
         
         /* CTA Section */
         .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: var(--xl-blue); /* WARNA BARU */
+            color: var(--light-text);
             padding: 80px 0;
             text-align: center;
         }
@@ -414,7 +435,7 @@
         /* Footer */
         footer {
             background: #2c3e50;
-            color: white;
+            color: var(--light-text);
             padding: 40px 0;
             text-align: center;
         }
@@ -432,12 +453,12 @@
         }
         
         .footer-links a {
-            color: white;
+            color: var(--light-text);
             text-decoration: none;
         }
         
         .footer-links a:hover {
-            color: #667eea;
+            color: var(--xl-yellow); /* WARNA BARU */
         }
         
         /* Responsive */
@@ -466,9 +487,23 @@
             .logo {
                 font-size: 22px;
             }
+
+            /* Perbaikan card header di mobile */
+            .package-name {
+                font-size: 22px;
+                padding: 15px 20px;
+            }
+
+            .package-card-content {
+                padding: 20px;
+            }
+
+            .package-button {
+                margin: 0 20px 20px 20px;
+            }
         }
         
-        /* Floating WhatsApp Button */
+        /* Floating WhatsApp Button (Tetap Hijau) */
         .whatsapp-float {
             position: fixed;
             width: 60px;
@@ -506,7 +541,7 @@
             }
         }
     </style>
-</head>
+    </head>
 <body>
     <header>
         <div class="container">
@@ -522,7 +557,8 @@
     <section class="hero">
         <div class="container">
             <h1>Internet Rumah Solo Raya Tercepat & Termurah</h1>
-            <h2>WiFi Unlimited dengan Kecepatan Hingga 1 Gbps</h2> <p>Nikmati streaming, gaming, dan bekerja tanpa batas dengan XLSatu - Provider internet rumahan terpercaya di Solo Raya</p>
+            <h2>WiFi Unlimited dengan Kecepatan Hingga 1 Gbps</h2>
+            <p>Nikmati streaming, gaming, dan bekerja tanpa batas dengan XLSatu - Provider internet rumahan terpercaya di Solo Raya</p>
             <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20ingin%20berlangganan%20internet%20rumah%20di%20Solo%20Raya.%20Mohon%20info%20lengkapnya." class="cta-button">
                 <i class="fab fa-whatsapp"></i> Pasang Sekarang via WhatsApp
             </a>
@@ -537,9 +573,6 @@
                 <span class="area-badge">Karanganyar</span>
                 <span class="area-badge">Boyolali</span>
                 <span class="area-badge">Sukoharjo</span>
-                <span class="area-badge">Klaten</span>
-                <span class="area-badge">Sragen</span>
-                <span class="area-badge">Wonogiri</span>
             </div>
         </div>
     </section>
@@ -553,7 +586,8 @@
                         <i class="fas fa-bolt"></i>
                     </div>
                     <h3>Kecepatan Super</h3>
-                    <p>Koneksi internet fiber optic stabil hingga 1 Gbps</p> </div>
+                    <p>Koneksi internet fiber optic stabil hingga 1 Gbps</p>
+                </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-infinity"></i>
@@ -561,7 +595,6 @@
                     <h3>Unlimited Kuota</h3>
                     <p>Tanpa batas kuota (FUP), browsing dan download sepuasnya 24/7</p>
                 </div>
-                
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-mobile-alt"></i>
@@ -574,13 +607,15 @@
                         <i class="fas fa-tag"></i>
                     </div>
                     <h3>Harga Terjangkau</h3>
-                    <p>Paket internet murah mulai dari Rp 185.000 / bulan</p> </div>
+                    <p>Paket internet murah mulai dari Rp 185.000 / bulan</p>
+                </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-tools"></i>
                     </div>
                     <h3>Promo Instalasi</h3>
-                    <p>Tersedia promo Biaya Instalasi Rp 0,- untuk paket tertentu</p> </div>
+                    <p>Tersedia promo Biaya Instalasi Rp 0,- untuk paket tertentu</p>
+                </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
@@ -599,8 +634,8 @@
             <div class="packages-grid">
 
                 <div class="package-card">
+                    <div class="package-name">STARTER</div>
                     <div class="package-card-content">
-                        <div class="package-name">STARTER</div>
                         <div class="package-speed">20 Mbps</div>
                         <div class="package-price">Rp 185.000</div>
                         <div class="package-period">per bulan</div>
@@ -611,13 +646,13 @@
                         </ul>
                     </div>
                     <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20STARTER%2020%20Mbps" class="package-button">
-                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                        Pesan via WhatsApp
                     </a>
                 </div>
 
                 <div class="package-card">
+                    <div class="package-name">VALUE</div>
                     <div class="package-card-content">
-                        <div class="package-name">VALUE</div>
                         <div class="package-speed">30 Mbps</div>
                         <div class="package-price">Rp 219.000</div>
                         <div class="package-period">per bulan</div>
@@ -628,14 +663,14 @@
                         </ul>
                     </div>
                     <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20VALUE%2030%20Mbps" class="package-button">
-                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                        Pesan via WhatsApp
                     </a>
                 </div>
 
                 <div class="package-card popular">
                     <div class="popular-badge">TERLARIS</div>
+                    <div class="package-name">SMART</div>
                     <div class="package-card-content">
-                        <div class="package-name">SMART</div>
                         <div class="package-speed">50 Mbps</div>
                         <div class="package-price">Rp 229.000</div>
                         <div class="package-period">per bulan</div>
@@ -646,13 +681,13 @@
                         </ul>
                     </div>
                     <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20SMART%2050%20Mbps" class="package-button">
-                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                        Pesan via WhatsApp
                     </a>
                 </div>
 
                 <div class="package-card">
+                    <div class="package-name">FAMILY</div>
                     <div class="package-card-content">
-                        <div class="package-name">FAMILY</div>
                         <div class="package-speed">100 Mbps</div>
                         <div class="package-price">Rp 279.000</div>
                         <div class="package-period">per bulan</div>
@@ -663,13 +698,13 @@
                         </ul>
                     </div>
                     <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20FAMILY%20100%20Mbps" class="package-button">
-                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                        Pesan via WhatsApp
                     </a>
                 </div>
                 
                 <div class="package-card">
+                    <div class="package-name">SUPERUSER</div>
                     <div class="package-card-content">
-                        <div class="package-name">SUPERUSER</div>
                         <div class="package-speed">150 Mbps</div>
                         <div class="package-price">Rp 299.000</div>
                         <div class="package-period">per bulan</div>
@@ -680,13 +715,13 @@
                         </ul>
                     </div>
                     <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20SUPERUSER%20150%20Mbps" class="package-button">
-                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                        Pesan via WhatsApp
                     </a>
                 </div>
                 
                 <div class="package-card">
+                    <div class="package-name">PREMIUM</div>
                     <div class="package-card-content">
-                        <div class="package-name">PREMIUM</div>
                         <div class="package-speed">200 Mbps</div>
                         <div class="package-price">Rp 329.000</div>
                         <div class="package-period">per bulan</div>
@@ -697,13 +732,13 @@
                         </ul>
                     </div>
                     <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20PREMIUM%20200%20Mbps" class="package-button">
-                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                        Pesan via WhatsApp
                     </a>
                 </div>
                 
                 <div class="package-card">
+                    <div class="package-name">ULTIMATE</div>
                     <div class="package-card-content">
-                        <div class="package-name">ULTIMATE</div>
                         <div class="package-speed">300 Mbps</div>
                         <div class="package-price">Rp 400.000</div>
                         <div class="package-period">per bulan</div>
@@ -714,13 +749,13 @@
                         </ul>
                     </div>
                     <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20ULTIMATE%20300%20Mbps" class="package-button">
-                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                        Pesan via WhatsApp
                     </a>
                 </div>
                 
                 <div class="package-card">
+                    <div class="package-name">ULTRA</div>
                     <div class="package-card-content">
-                        <div class="package-name">ULTRA</div>
                         <div class="package-speed">600 Mbps</div>
                         <div class="package-price">Rp 500.000</div>
                         <div class="package-period">per bulan</div>
@@ -731,13 +766,13 @@
                         </ul>
                     </div>
                     <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20ULTRA%20600%20Mbps" class="package-button">
-                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                        Pesan via WhatsApp
                     </a>
                 </div>
                 
                 <div class="package-card">
+                    <div class="package-name">EXTREME</div>
                     <div class="package-card-content">
-                        <div class="package-name">EXTREME</div>
                         <div class="package-speed">1 Gbps</div>
                         <div class="package-price">Rp 900.000</div>
                         <div class="package-period">per bulan</div>
@@ -748,7 +783,7 @@
                         </ul>
                     </div>
                     <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20EXTREME%201%20Gbps" class="package-button">
-                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                        Pesan via WhatsApp
                     </a>
                 </div>
 
@@ -756,14 +791,15 @@
             <p class="ppn-disclaimer">Harga di atas belum termasuk PPN 11%</p>
         </div>
     </section>
-    <section class="packages" id="paket-combo" style="background: white;"> <div class="container">
+    
+    <section class="packages" id="paket-combo" style="background: var(--card-bg);"> <div class="container">
             <h2>Paket COMBO (Internet + TV)</h2>
             <p class="packages-subtitle">Pilihan terbaik untuk internet cepat, channel TV, dan bonus kuota HP (FM Area).</p>
             <div class="packages-grid">
 
                 <div class="package-card">
+                    <div class="package-name">JOY VALUE</div>
                     <div class="package-card-content">
-                        <div class="package-name">JOY VALUE</div>
                         <div class="package-speed">100 Mbps</div>
                         <div class="package-details">98 TV Channel</div>
                         <div class="package-sub-details">Bonus Kuota HP 25 GB (2 Member)</div>
@@ -774,13 +810,13 @@
                         </ul>
                     </div>
                     <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20COMBO%20JOY%20VALUE" class="package-button">
-                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                        Pesan via WhatsApp
                     </a>
                 </div>
 
                 <div class="package-card">
+                    <div class="package-name">JOY PRO</div>
                     <div class="package-card-content">
-                        <div class="package-name">JOY PRO</div>
                         <div class="package-speed">150 Mbps</div>
                         <div class="package-details">99 TV Channel</div>
                         <div class="package-sub-details">Bonus Kuota HP 50 GB (3 Member)</div>
@@ -791,13 +827,13 @@
                         </ul>
                     </div>
                     <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20COMBO%20JOY%20PRO" class="package-button">
-                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                        Pesan via WhatsApp
                     </a>
                 </div>
 
                 <div class="package-card">
+                    <div class="package-name">JOY PREMIUM</div>
                     <div class="package-card-content">
-                        <div class="package-name">JOY PREMIUM</div>
                         <div class="package-speed">200 Mbps</div>
                         <div class="package-details">167 TV Channel</div>
                         <div class="package-sub-details">Bonus Kuota HP 50 GB (3 Member)</div>
@@ -808,13 +844,13 @@
                         </ul>
                     </div>
                     <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20COMBO%20JOY%20PREMIUM" class="package-button">
-                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                        Pesan via WhatsApp
                     </a>
                 </div>
 
                 <div class="package-card">
+                    <div class="package-name">STAR VALUE</div>
                     <div class="package-card-content">
-                        <div class="package-name">STAR VALUE</div>
                         <div class="package-speed">300 Mbps</div>
                         <div class="package-details">189 TV Channel (termasuk Viu)</div>
                         <div class="package-sub-details">Bonus Kuota HP 100 GB (4 Member)</div>
@@ -825,13 +861,13 @@
                         </ul>
                     </div>
                     <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20COMBO%20STAR%20VALUE" class="package-button">
-                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                        Pesan via WhatsApp
                     </a>
                 </div>
                 
                 <div class="package-card">
+                    <div class="package-name">STAR PRO</div>
                     <div class="package-card-content">
-                        <div class="package-name">STAR PRO</div>
                         <div class="package-speed">500 Mbps</div>
                         <div class="package-details">191 TV Channel (termasuk Viu)</div>
                         <div class="package-sub-details">Bonus Kuota HP 100 GB (4 Member)</div>
@@ -842,13 +878,13 @@
                         </ul>
                     </div>
                     <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20COMBO%20STAR%20PRO" class="package-button">
-                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                        Pesan via WhatsApp
                     </a>
                 </div>
                 
                 <div class="package-card">
+                    <div class="package-name">STAR PREMIUM</div>
                     <div class="package-card-content">
-                        <div class="package-name">STAR PREMIUM</div>
                         <div class="package-speed">1 Gbps</div>
                         <div class="package-details">205 TV Channel (termasuk Viu, Netflix)</div>
                         <div class="package-sub-details">Bonus Kuota HP 100 GB (4 Member)</div>
@@ -859,7 +895,7 @@
                         </ul>
                     </div>
                     <a href="https://wa.me/6281578699460?text=Halo%20XLSatu,%20saya%20tertarik%20dengan%20Paket%20COMBO%20STAR%20PREMIUM" class="package-button">
-                        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                        Pesan via WhatsApp
                     </a>
                 </div>
 
@@ -867,6 +903,8 @@
             <p class="ppn-disclaimer">Harga di atas belum termasuk PPN 11%</p>
         </div>
     </section>
+    
+
     <section class="testimonials">
         <div class="container">
             <h2>Kata Pelanggan XLSatu di Solo Raya</h2>
@@ -933,7 +971,7 @@
                 <a href="https://wa.me/6281578699460">Hubungi Kami</a>
             </div>
             <p>&copy; 2025 XLSatu. Semua Hak Dilindungi.</p>
-            <p style="margin-top: 10px; font-size: 14px; color: #bbb;">Melayani: Internet Rumah Solo, WiFi Surakarta, Paket Internet Karanganyar, Boyolali, Sukoharjo, Klaten, Sragen, Wonogiri</p>
+            <p style="margin-top: 10px; font-size: 14px; color: #bbb;">Melayani: Internet Rumah Solo, WiFi Surakarta, Paket Internet Karanganyar, Boyolali, Sukoharjo</p>
         </div>
     </footer>
 
@@ -947,16 +985,15 @@
         "@type": "LocalBusiness",
         "name": "XLSatu Internet Rumah Solo Raya",
         "description": "Provider internet rumah dan WiFi unlimited tercepat di Solo Raya dengan harga terjangkau",
-        "url": "https://[domain-anda.com]", "telephone": "+6281578699460",
-        "priceRange": "Rp 185.000 - Rp 4.500.000", "areaServed": [
+        "url": "https://[domain-anda.com]",
+        "telephone": "+6281578699460",
+        "priceRange": "Rp 185.000 - Rp 4.500.000",
+        "areaServed": [
             "Solo",
             "Surakarta",
             "Karanganyar",
             "Boyolali",
-            "Sukoharjo",
-            "Klaten",
-            "Sragen",
-            "Wonogiri"
+            "Sukoharjo"
         ],
         "serviceType": "Internet Service Provider",
         "address": {
